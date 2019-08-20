@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vwLevel1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/imTex1"
+        app:layout_constraintTop_toTopOf="@+id/imTex8"
+        app:srcCompat="@drawable/ball_main" />
+
+    <ImageView
+        android:id="@+id/imTex1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imTex1"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex16"
+        app:layout_constraintTop_toBottomOf="@+id/imTex2"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex17"
+        app:layout_constraintTop_toBottomOf="@+id/imTex3"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex18"
+        app:layout_constraintTop_toBottomOf="@+id/imTex4"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex19"
+        app:layout_constraintTop_toBottomOf="@+id/imTex5"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex20"
+        app:layout_constraintTop_toBottomOf="@+id/imTex6"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="f"
+        app:layout_constraintStart_toEndOf="@+id/imTex21"
+        app:layout_constraintTop_toBottomOf="@+id/imTex7"
+        app:srcCompat="@drawable/ball_j" />
+
+    <ImageView
+        android:id="@+id/imTex23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex22"
+        app:layout_constraintTop_toBottomOf="@+id/imTex8"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex23"
+        app:layout_constraintTop_toBottomOf="@+id/imTex9"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex24"
+        app:layout_constraintTop_toBottomOf="@+id/imTex10"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex25"
+        app:layout_constraintTop_toBottomOf="@+id/imTex11"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex26"
+        app:layout_constraintTop_toBottomOf="@+id/imTex12"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex27"
+        app:layout_constraintTop_toBottomOf="@+id/imTex13"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex28"
+        app:layout_constraintTop_toBottomOf="@+id/imTex14"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex29"
+        app:layout_constraintTop_toBottomOf="@+id/imTex15"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imTex16"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex31"
+        app:layout_constraintTop_toBottomOf="@+id/imTex17"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex32"
+        app:layout_constraintTop_toBottomOf="@+id/imTex18"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex33"
+        app:layout_constraintTop_toBottomOf="@+id/imTex19"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex34"
+        app:layout_constraintTop_toBottomOf="@+id/imTex20"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex35"
+        app:layout_constraintTop_toBottomOf="@+id/imTex21"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex36"
+        app:layout_constraintTop_toBottomOf="@+id/imTex22"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex37"
+        app:layout_constraintTop_toBottomOf="@+id/imTex23"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex38"
+        app:layout_constraintTop_toBottomOf="@+id/imTex24"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex39"
+        app:layout_constraintTop_toBottomOf="@+id/imTex25"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex40"
+        app:layout_constraintTop_toBottomOf="@+id/imTex26"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex41"
+        app:layout_constraintTop_toBottomOf="@+id/imTex27"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex42"
+        app:layout_constraintTop_toBottomOf="@+id/imTex28"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex43"
+        app:layout_constraintTop_toBottomOf="@+id/imTex29"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex44"
+        app:layout_constraintTop_toBottomOf="@+id/imTex30"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imTex31"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex46"
+        app:layout_constraintTop_toBottomOf="@+id/imTex32"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex47"
+        app:layout_constraintTop_toBottomOf="@+id/imTex33"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex48"
+        app:layout_constraintTop_toBottomOf="@+id/imTex34"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex49"
+        app:layout_constraintTop_toBottomOf="@+id/imTex35"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex50"
+        app:layout_constraintTop_toBottomOf="@+id/imTex36"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex51"
+        app:layout_constraintTop_toBottomOf="@+id/imTex37"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex52"
+        app:layout_constraintTop_toBottomOf="@+id/imTex38"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex53"
+        app:layout_constraintTop_toBottomOf="@+id/imTex39"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex54"
+        app:layout_constraintTop_toBottomOf="@+id/imTex40"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex55"
+        app:layout_constraintTop_toBottomOf="@+id/imTex41"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex56"
+        app:layout_constraintTop_toBottomOf="@+id/imTex42"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex57"
+        app:layout_constraintTop_toBottomOf="@+id/imTex43"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex58"
+        app:layout_constraintTop_toBottomOf="@+id/imTex44"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex59"
+        app:layout_constraintTop_toBottomOf="@+id/imTex45"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imTex46"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex61"
+        app:layout_constraintTop_toBottomOf="@+id/imTex47"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex62"
+        app:layout_constraintTop_toBottomOf="@+id/imTex48"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex63"
+        app:layout_constraintTop_toBottomOf="@+id/imTex49"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex64"
+        app:layout_constraintTop_toBottomOf="@+id/imTex50"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex65"
+        app:layout_constraintTop_toBottomOf="@+id/imTex51"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex66"
+        app:layout_constraintTop_toBottomOf="@+id/imTex52"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex67"
+        app:layout_constraintTop_toBottomOf="@+id/imTex53"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex68"
+        app:layout_constraintTop_toBottomOf="@+id/imTex54"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex69"
+        app:layout_constraintTop_toBottomOf="@+id/imTex55"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex70"
+        app:layout_constraintTop_toBottomOf="@+id/imTex56"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex71"
+        app:layout_constraintTop_toBottomOf="@+id/imTex57"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex72"
+        app:layout_constraintTop_toBottomOf="@+id/imTex58"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex73"
+        app:layout_constraintTop_toBottomOf="@+id/imTex59"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex74"
+        app:layout_constraintTop_toBottomOf="@+id/imTex60"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imTex61"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex76"
+        app:layout_constraintTop_toBottomOf="@+id/imTex62"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex77"
+        app:layout_constraintTop_toBottomOf="@+id/imTex63"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex78"
+        app:layout_constraintTop_toBottomOf="@+id/imTex64"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex79"
+        app:layout_constraintTop_toBottomOf="@+id/imTex65"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex80"
+        app:layout_constraintTop_toBottomOf="@+id/imTex66"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex81"
+        app:layout_constraintTop_toBottomOf="@+id/imTex67"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex83"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex82"
+        app:layout_constraintTop_toBottomOf="@+id/imTex68"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex83"
+        app:layout_constraintTop_toBottomOf="@+id/imTex69"
+        app:srcCompat="@drawable/tex" />
+
+    <ImageView
+        android:id="@+id/imTex85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex84"
+        app:layout_constraintTop_toBottomOf="@+id/imTex70"
+        app:srcCompat="@drawable/open" />
+
+    <ImageView
+        android:id="@+id/imTex86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex85"
+        app:layout_constraintTop_toBottomOf="@+id/imTex71"
+        app:srcCompat="@drawable/disk" />
+
+    <ImageView
+        android:id="@+id/imTex87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex86"
+        app:layout_constraintTop_toBottomOf="@+id/imTex72"
+        app:srcCompat="@drawable/ball_r" />
+
+    <ImageView
+        android:id="@+id/imTex88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex87"
+        app:layout_constraintTop_toBottomOf="@+id/imTex73"
+        app:srcCompat="@drawable/disk" />
+
+    <ImageView
+        android:id="@+id/imTex89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex88"
+        app:layout_constraintTop_toBottomOf="@+id/imTex74"
+        app:srcCompat="@drawable/ball_s_dgs" />
+
+    <ImageView
+        android:id="@+id/imTex90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imTex89"
+        app:layout_constraintTop_toBottomOf="@+id/imTex75"
+        app:srcCompat="@drawable/ball_s" />
+
+</android.support.constraint.ConstraintLayout>
