@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/ -->
+<html dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="keywords" content="android, tutoriales en español, tips, teléfonos android, android méxico, documentación android en español, diseño en android, aplicaciones android, sdk android, tutoriales android">
+<link rel="shortcut icon" href="http://androideity.com/wp-content/themes/yoko/images/favicon.png"> 
+<title>Manejando la rotación de pantalla en Android | Androideity</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="screen" href="./Manejando la rotación de pantalla en Android   Androideity_files/style.css">
+<link rel="pingback" href="http://androideity.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://androideity.com/wp-content/themes/yoko/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Androideity » Feed" href="http://androideity.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Androideity » Comments Feed" href="http://androideity.com/comments/feed/">
+
+            <script async="" src="./Manejando la rotación de pantalla en Android   Androideity_files/saved_resource"></script><script id="facebook-jssdk" src="./Manejando la rotación de pantalla en Android   Androideity_files/all.js"></script><script type="text/javascript" async="" src="./Manejando la rotación de pantalla en Android   Androideity_files/ga.js"></script><script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-24379320-1']);
+				            _gaq.push(['_setAllowAnchor',true],['_setCustomVar',2,'post_type','post',3],['_setCustomVar',3,'author','condesa',3],['_setCustomVar',4,'year','2011',3],['_setCustomVar',5,'category','programacion',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Androideity » Manejando la rotación de pantalla en Android Comments Feed" href="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/feed/">
+<link rel="stylesheet" id="contact-form-7-css" href="./Manejando la rotación de pantalla en Android   Androideity_files/styles.css" type="text/css" media="all">
+<script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/jquery.js"></script>
+<script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://androideity.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://androideity.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Corre aplicaciones Android en tu PC" href="http://androideity.com/2011/10/05/corre-aplicaciones-android-en-tu-pc/">
+<link rel="next" title="Yuzu. Televisión Online, alternativa de Netflix" href="http://androideity.com/2011/10/06/yuzu-television-online-alternativa-de-netflix/">
+<meta name="generator" content="WordPress 3.3.1">
+<link rel="shortlink" href="http://androideity.com/?p=1462">
+<script charset="utf-8" type="text/javascript">var switchTo5x=false;</script><script charset="utf-8" type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.6a4a1a25-866f-4222-b10d-9f07d56a6103'});var st_type='wordpress3.1';</script>
+<style type="text/css">
+#content .single-entry-header h1.entry-title, h2.entry-title a, h1.page-title a {color: #FFF!important;}
+h2.entry-title a:hover{ text-decoration:underline!important;}
+#branding #mainnav ul li a:hover{ color: #FFF!important;}
+#branding #mainnav ul li a{ color: #FFF!important;}
+input#submit:hover {background-color: #A4C639!important;}
+/*#content .page-entry-header h1.entry-title {color: !important;}*/
+.searchsubmit:hover {background-color: #A4C639!important;}
+</style>
+
+<!-- All in One SEO Pack 2.1.4 by Michael Torbert of Semper Fi Web Design[500,565] -->
+<meta name="keywords" content="conociendo android,desarrollo en android,primeros pasos en android,recursos,tutorial">
+
+<link rel="canonical" href="./Manejando la rotación de pantalla en Android   Androideity_files/Manejando la rotación de pantalla en Android   Androideity.html">
+<!-- /all in one seo pack -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript" async="" src="./Manejando la rotación de pantalla en Android   Androideity_files/embed.js"></script><script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/getAllAppDefault.esi"></script><script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/checkOAuth.esi"></script><link rel="stylesheet" type="text/css" href="./Manejando la rotación de pantalla en Android   Androideity_files/buttons.1be8af3324f0d6a3f57225413b0da78b.css"><script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/getCount2.php"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="./Manejando la rotación de pantalla en Android   Androideity_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script></head>
+<body class="single single-post postid-1462 single-format-standard" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./Manejando la rotación de pantalla en Android   Androideity_files/hub.495aa91f8927e5f490215e98e950746c(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./Manejando la rotación de pantalla en Android   Androideity_files/hub.495aa91f8927e5f490215e98e950746c.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe>
+<div id="page" class="clearfix">
+	<header id="branding">
+				
+		
+		<hgroup id="site-title">
+					<h1><a href="http://androideity.com/" title="Androideity" rel="home">Androideity</a></h1>
+				<h2 id="site-description">Programación android en español, tutoriales, documentación, noticias, smartphones, tablets, programación android, aplicaciones android</h2>
+				</hgroup><!-- end site-title -->
+        
+        						<a href="http://androideity.com/" title="Androideity" rel="home"><img src="./Manejando la rotación de pantalla en Android   Androideity_files/ginko.jpg" class="headerimage" width="1102" height="175" alt=""></a><!-- end headerimage -->
+					                    <nav id="mainnav" class="clearfix">
+			<div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-763"><a href="http://androideity.com/">Inicio</a></li>
+<li id="menu-item-779" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-779"><a href="http://androideity.com/category/programacion/">Programación</a></li>
+<li id="menu-item-782" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-782"><a href="http://androideity.com/category/aplicaciones/">Aplicaciones</a></li>
+<li id="menu-item-780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-780"><a href="http://androideity.com/category/eventos-2/">Eventos</a></li>
+<li id="menu-item-781" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-781"><a href="http://androideity.com/category/disenio/">Diseño</a></li>
+<li id="menu-item-784" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-784"><a href="http://androideity.com/category/herramientas/">Herramientas</a></li>
+<li id="menu-item-785" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-785"><a href="http://androideity.com/category/tips/">Tips</a></li>
+<li id="menu-item-764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-764"><a href="http://androideity.com/esto-es-androideity/">Nosotros</a></li>
+</ul></div>		</nav><!-- end mainnav -->
+					<div class="clear"></div>
+					
+		
+        <nav id="subnav">
+					</nav><!-- end subnav -->	
+</header><!-- end header -->
+<div id="wrap">
+<div id="main">
+
+	<div id="content">
+
+	
+			
+<article id="post-1462" class="post-1462 post type-post status-publish format-standard hentry category-programacion tag-conociendo-android tag-desarrollo-en-android tag-primeros-pasos-en-android tag-recursos tag-tutorial">
+
+	<div id="imagepost"></div>
+	<header class="single-entry-header">	
+		<h1 class="entry-title">Manejando la rotación de pantalla en Android</h1>
+			<p><span class="entry-author">Escrito por <span class="green_droid">Condesa</span></span> | <span class="entry-date">Thursday, October 6, 2011 a las 8:30 am</span>  | <a href="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/#comments" title="Comment on Manejando la rotación de pantalla en Android"><span class="dsq-postid" rel="1462 http://androideity.com/?p=1462">37 Comentarios</span></a></p>
+	</header><!-- end single-entry-header -->
+		
+	<div class="single-entry-content">
+				<p style="text-align: center;"><a title="Rotación de pantalla en Android" href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation.png" target="_blank"><img class="aligncenter size-full wp-image-1470" style="margin-top: 20px; margin-bottom: 20px;" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation.png" alt="" width="578" height="280"></a></p>
+<p>Uno de los temas más importantes que hay que conocer es cómo Android gestiona la rotación de la interfaz de usuario dependiendo de la posición que adquiera el teléfono al rotarlo. La mayoría de los teléfonos de hoy en día son touch y se encuentran dotados por sensores como el acelerómetro que nos permite saber cuando un teléfono cambia entre los estados <em>portrait </em>(vertical)&nbsp;y <em>landscape </em>(horizontal).</p>
+<p>También, resulta una buena práctica asegurarnos de que nuestras interfaces se visualizarán de una forma decente en cualquiera de estos dos estados. Por ello, el día de hoy vamos a conocer los conceptos básicos que debes tomar en cuenta para que tus aplicaciones estén listas para esas rotaciones que da la vida.</p>
+<p><span id="more-1462"></span></p>
+<p>Por default, cuando ocurre un cambio en la configuración del teléfono (como cambio de idioma) que repercute en la selección de los recursos en una aplicación, Android destruye y reconstruye todas las actividades que se estén ejecutando o aquellas que se encontraban pausadas con el fin de prepararlas para el momento en el que el usuario interactúe nuevamente con ellas. La rotación es uno de estos escenarios ya que provoca que nuevos recursos de layout sean cargados con la finalidad de ofrecerle una vista más cómoda al usuario según la posición del teléfono que esté utilizando en ese momento.</p>
+<p>Y si bien podría pensarse que únicamente el cambio se da a nivel visual, no hay que olvidar que el usuario pudo haber introducido datos en una pantalla o pudo a ver estado enfocando algún ítem a la mitad de un <em>ListView</em>; en estos casos, la rotación de pantalla no tiene que truncar estas acciones y por el contrario, debemos hacer todo lo posible para que el usuario visualice esos mismos datos o ese mismo ítem en la nueva vista que ha sido llamada.</p>
+<p>En estos casos, resulta útil el uso del método <em>onSaveInstanceState()</em> que debemos implementar dentro de nuestra actividad y llenar el objeto <em>Bundle</em> suministrado como parámetro con la información suficiente para “regresar” a la nueva actividad al estado actual de la actividad cuya orientación acaba de cambiar.</p>
+<p>Posteriormente, con el método <em>onRestoreInstanceState()</em> recuperamos toda esta información del objeto <em>Bundle</em> y la utilizamos para que la actividad se muestre con la información tal y como estaba en la actividad anterior.</p>
+<p>Para se haga más claro, vamos a pasar a la parte divertida: el código.</p>
+<p>1. Creamos un nuevo proyecto Android llamado <em>RotacionDemo</em> con la versión 2.2.</p>
+<p>2. En este ejemplo manejaremos dos archivos de layout; uno para la vista en <em>portrait</em> y la otra para la vista en <em>landscape</em>. La primera la definiremos dentro de la carpeta <em>res &gt; layout </em>en el archivo <em>main.xml</em> tal y como te muestro a continuación:</p>
+<p><a href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation01.png"><img class="aligncenter size-full wp-image-1463" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation01.png" alt="" width="543" height="343"></a></p>
+<p>3. Para definir la vista en <em>landscape</em> es necesario crear una carpeta llamada <em>layout-land</em> dentro del directorio <em>res</em>. Dentro de esta carpeta vamos a crear un nuevo archivo XML llamado <em>main.xml</em> en el que definiremos lo siguiente:</p>
+<p style="text-align: center;"><a title="Rotación de pantalla en Android" href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation02.png" target="_blank"><img class="aligncenter size-full wp-image-1464" style="margin-top: 20px; margin-bottom: 20px;" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation02.png" alt="" width="544" height="343"></a></p>
+<p>Como puedes ver, el contenido de ambos archivos es casi idéntico. Hemos definido un <em>LinearLayout</em> como elemento raíz del archivo, y dentro de él hemos colocado dos botones, el primero mostrando un texto “Seleccionar” y el segundo mostrando el texto “Ver”, ambos definidos en el archivo <em>res &gt; values &gt; strings.xml</em>. La diferencia reside en que el atributo <em>android:orientation</em> del primer layout lo hemos definido en <em>vertical</em> y el segundo, en <em>horizontal.</em> De esta manera, en el modo <em>portrait</em>, los botones se mostrarán uno sobre otro, mientras que en el modo <em>landscape</em> se mostrarán uno al lado del otro.</p>
+<p>Otro punto importante que quiero aclarar antes de avanzar con el tutorial es la razón de por qué hemos llamado de la misma forma los archivos en los dos directorios de layout. Android es un sistema operativo “tan inteligente” que cuando se trata de elegir recursos según las características que muestre el teléfono, seleccionará aquellos que se apeguen a los requerimientos de las aplicaciones para su buena visualización. Cuando platicamos acerca del <a title="Manejo de varios idiomas en una aplicación Android" href="http://androideity.com/2011/08/17/manejo-de-varios-idiomas-en-una-aplicacion-android/" target="_blank">manejo de idiomas en Android</a>, vimos cómo con agregar un sufijo con la clave del país al final de una carpeta <em>values</em>, Android entiende que nuestra aplicación soporta varios idiomas, eligiendo de forma automática cuál debe ser el idioma por default que debe mostrar tomando en cuenta la configuración del teléfono. Este mismo comportamiento lo vemos con los directorios <em>drawable</em> que nos permiten manejar recursos de imagen que se acomoden a los diferentes tamaños de pantalla, dejando una vez más que Android se encargue de gestionar qué recursos serán llamados.</p>
+<p>Con los layouts pasa lo mismo. Para definir los diferentes estados de una interfaz de usuario, es necesario separar los archivos de layout en las carpetas <em>res &gt; layout</em> y <em>res &gt; layout-land</em>. Si por ejemplo, tuviéramos un layout llamado <em>vista_directorio.xml</em>, este archivo deberá colocarse en ambos directorios con sus modificaciones correspondientes que le permitan desplegarse cómodamente en la pantalla. De la misma forma que en los casos anteriores, Android se encargará de llamar el archivo layout correspondiente de acuerdo a la posición del teléfono.</p>
+<p>4. En este ejemplo vamos a utilizar el <em>Intent</em> que nos permite trabajar con el directorio de contactos del teléfono. La funcionalidad irá así: Al presionar el botón <em>Seleccionar</em> se lanzará el <em>Intent</em> del directorio, por lo que podremos elegir a algún contacto y una vez hecho esto, regresaremos a la pantalla inicial dónde nos encontraremos al botón <em>Ver</em> habilitado (recordar que en la definición en XML, definimos que este botón apareciera deshabilitado al arranque de la aplicación). Al hacer clic sobre el botón <em>Ver</em>, este lanzará otro <em>Intent</em> que nos permitirá ver los detalles completos del contacto que seleccionamos momentos antes. El plus es que sin importar que rotemos el teléfono, la selección previa que haya hecho el usuario deberá guardarse.</p>
+<p>A continuación te escribo el código Java que deberás tener en la actividad principal de tu proyecto:</p>
+<pre lang="java">import android.app.Activity;
+import android.os.Bundle;
+import android.provider.ContactsContract.Contacts;
+import android.widget.Button;
+import android.net.Uri;
+import android.view.View;
+import android.content.Intent;
+
+public class RotacionDemoActivity extends Activity {
+
+	static final int PICK_REQUEST=1337;
+	Button viewButton=null;
+	Uri contact=null;
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        Button btn=(Button)findViewById(R.id.seleccionar); 
+
+        btn.setOnClickListener(new View.OnClickListener() {
+          public void onClick(View view) {
+            Intent i=new Intent(Intent.ACTION_PICK,
+                               Contacts.CONTENT_URI); 
+
+            startActivityForResult(i, PICK_REQUEST);
+          }
+        });
+
+        viewButton=(Button)findViewById(R.id.ver); 
+
+        viewButton.setOnClickListener(new View.OnClickListener() {
+          public void onClick(View view) {
+            startActivity(new Intent(Intent.ACTION_VIEW, contact));
+          }
+        }); 
+
+        restoreMe(savedInstanceState); 
+
+        viewButton.setEnabled(contact!= null);
+    }//Fin de onCreate()
+
+    @Override
+    protected void onActivityResult(int requestCode,
+    		int resultCode, Intent data) {
+    	if (requestCode==PICK_REQUEST) {
+    		if (resultCode==RESULT_OK) {
+    			contact=data.getData();
+    			viewButton.setEnabled(true);
+            }
+        }
+    }//Fin de onActivityResult() 
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+    	super.onSaveInstanceState(outState);
+        if (contact!=null) {
+        	outState.putString("contact", contact.toString());
+        }
+    }//Fin de onSaveInstanceState()
+
+    private void restoreMe(Bundle state){
+    	contact=null; 
+
+    	if (state!=null) {
+    		String contactUri=state.getString("contact"); 
+
+    		if (contactUri!=null) {
+    			contact=Uri.parse(contactUri);
+            }
+    	}
+     }//Fin de restoreMe()
+
+}</pre>
+<p>La magia de la actividad se encuentra centrada en los tres métodos <em>onActivityResult()</em>, <em>onSaveInstanceState()</em> y <em>restoreMe()</em>. El método&nbsp;<em>onActivityResult()</em> lo sobreescribimos de la superclase para que una vez que hayamos elegido el contacto de la lista, guardemos momentáneamente esa Uri en el objeto <em>contacto</em> y habilitemos el botón <em>viewButton</em> que es el botón <em>Ver</em> de nuestra aplicación. Este método se manda a llamar como respuesta a la invocación de <em>startActivityForResult()</em> dentro del listener del botón <em>Seleccionar</em>.</p>
+<p>También sobreescribimos el método <em>onSaveInstanceState()</em> para que pase lo que pase con la actividad guardemos la referencia del contacto que hemos elegido como el estado actual y que pueda ser recuperado si algún tipo de interrupción sucede.</p>
+<p>Por último, creamos un método llamado <em>restoreMe()</em> que en el caso de que se detecte un estado anterior guardado, se recupere dentro del objeto <em>contacto</em> definiendo la Uri de ese recurso que previamente se seleccionó para que al presionar el botón <em>Ver </em>no haya ningún problema en mostrar el detalle de ese contacto.</p>
+<p>5. Para ver realmente el funcionamiento de este demo, es recomendable que lo corras en tu teléfono ya que aquí tendrás tu directorio de contactos que es un pilar fundamental en la funcionalidad.</p>
+<p><span style="color: #99cc00;"><strong>Nota:</strong></span> Si decides trabajar en el emulador, podrás activar la rotación de la pantalla presionando la combinación de teclas <em>Ctrl + F12</em>.</p>
+<p>Al ejecutar la aplicación este será el comportamiento que debemos ver:</p>
+<p style="text-align: center;"><a title="Rotación de pantalla en Android" href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation03.png" target="_blank"><img class="aligncenter size-full wp-image-1466" style="margin-top: 20px; margin-bottom: 20px;" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation03.png" alt="" width="240" height="320"></a></p>
+<p style="text-align: center;"><em>Layout en Portrait</em></p>
+<p style="text-align: center;"><a title="Rotación de pantalla en Android" href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation041.png" target="_blank"><img class="aligncenter size-full wp-image-1468" style="margin-top: 20px; margin-bottom: 20px;" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation041.png" alt="" width="320" height="256"></a></p>
+<p style="text-align: center;"><em>Layout en Landscape</em></p>
+<p><a href="./Manejando la rotación de pantalla en Android   Androideity_files/rotation05.png"><img class="aligncenter size-full wp-image-1469" title="Rotación de pantalla en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/rotation05.png" alt="" width="240" height="320"></a></p>
+<p style="text-align: center;"><em>Vista de la información del contacto</em></p>
+<p style="text-align: center;"><em><br>
+</em></p>
+<p>Con este sencillo ejemplo hemos mostrado algunas de las consideraciones más importantes que debes tomar en cuenta con la rotación de la pantalla.</p>
+<p>Hay que agregar que dependiendo de la complejidad de nuestras aplicaciones, nos resultará necesario conocer mejores alternativas para guardar la consistencia de los estados, manejar de forma manual la rotación de la pantalla a través del <em>AndroidManifest.xml</em> o incluso cómo bloquear esta opción en una aplicación.</p>
+<p>De ser necesario estaremos platicando acerca de estos casos específicos en futuros posts, de mientras ya tienes algo nuevo que poner en práctica en tus aplicaciones.</p>
+<p>Descárgate en código fuente de este tutorial:</p>
+<p style="text-align: center;"><a href="https://github.com/Androideity/Tutorial_RotacionEnAndroid" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://github.com&#39;]);" target="_blank"><img class="aligncenter" title="Código GitHub" src="./Manejando la rotación de pantalla en Android   Androideity_files/GitHub1.png" alt="" width="265" height="154"></a></p>
+<p><em><br>
+</em></p>
+<p style="text-align: center;"><strong>¿Te fue útil este post? ¡Compártelo!</strong></p>
+<p style="text-align: center;"><strong><br>
+</strong></p>
+			<div class="clear"></div>
+			
+								
+		
+	<footer class="single-entry-meta">
+		<p>			Categoría: <a href="http://androideity.com/category/programacion/" title="View all posts in Programación" rel="category tag">Programación</a> | 
+									Etiquetas: <a href="http://androideity.com/tag/conociendo-android/" rel="tag">conociendo Android</a>, <a href="http://androideity.com/tag/desarrollo-en-android/" rel="tag">desarrollo en android</a>, <a href="http://androideity.com/tag/primeros-pasos-en-android/" rel="tag">primeros pasos en android</a>, <a href="http://androideity.com/tag/recursos/" rel="tag">recursos</a>, <a href="http://androideity.com/tag/tutorial/" rel="tag">tutorial</a> | 
+						<a href="./Manejando la rotación de pantalla en Android   Androideity_files/Manejando la rotación de pantalla en Android   Androideity.html">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+    
+    
+        <div id="imagecomparte"></div>
+        <div class="title">
+            <h2>Comparte este post</h2>
+        </div>    
+        <ul>
+        	<span class="st_facebook_hcount" st_title="Manejando la rotación de pantalla en Android" st_url="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/" displaytext="Me gusta" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-facebook-counter" style="background-image: url(http://w.sharethis.com/images/facebook_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">127</span></span></span></span></span></span><span class="st_twitter_hcount" st_title="Manejando la rotación de pantalla en Android" st_url="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/" displaytext="Tweet" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-twitter-counter" style="background-image: url(http://w.sharethis.com/images/twitter_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">35</span></span></span></span></span></span><span class="st_sharethis_hcount" st_title="Manejando la rotación de pantalla en Android" st_url="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/" displaytext="Compartir" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-sharethis-counter" style="background-image: url(http://w.sharethis.com/images/sharethis_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">39.3K</span></span></span></span></span></span>
+        </ul>
+
+	    <div id="imageautor"></div>
+	<div class="author-info">
+		<img alt="" src="./Manejando la rotación de pantalla en Android   Androideity_files/3269220c582da1d5db7069d6ba6be7d9" class="avatar avatar-70 photo" height="70" width="70">		<div class="author-description">
+		<h3>Acerca de: <a href="http://androideity.com/author/Deity/" target="_blank" title="Condesa" rel="me">Condesa</a></h3>
+		<p>Desarrolladora de aplicaciones Android, freelance, apasionada de la tecnología, y precursora del crecimiento tecnológico en México.</p>
+        <p>Sígueme en <a href="http://twitter.com/#!/condesa_sama" target="_blank">Twitter</a></p>
+        <p>Leer todos mis artículos <a href="http://androideity.com/author/Deity/" title="Posts by Condesa" rel="author">Condesa</a></p>
+		</div><!-- end author-description -->
+	</div><!-- end author-info -->
+		</div><!-- end single-entry-content -->
+    
+    
+
+</article><!-- end post-1462 -->
+
+<!-- Articulos relacionados -->
+    <div id="imageinteres"></div>
+	<div class="title">
+		<h2>También puede interesarte</h2>
+	</div>
+    <ul id="related_posts_thumbnails" style="list-style-type:none; list-style-position: inside; padding: 0; margin:0"><li style="float: left; padding: 0; margin:0; padding: 5px; display: block; border-right: 1px solid #DDDDDD; background-color: #FFFFFF" onmouseout="this.style.backgroundColor=&#39;#FFFFFF&#39;" onmouseover="this.style.backgroundColor=&#39;#EEEEEF&#39;"><a href="http://androideity.com/2011/07/07/la-maquina-virtual-dalvik/"><img alt="La máquina virtual Dalvik" src="./Manejando la rotación de pantalla en Android   Androideity_files/dalvik_virtualmachine-150x150.png" width="150" height="150" style="padding: 0px; margin: 0px; border: 0pt none;"></a><a href="http://androideity.com/2011/07/07/la-maquina-virtual-dalvik/" style="display: block; width: 150px; overflow: hidden;height: 75px; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: #86A3A4;text-decoration: none;"><span>La máquina virtual Dalvik</span></a></li><li style="float: left; padding: 0; margin:0; padding: 5px; display: block; border-right: 1px solid #DDDDDD; background-color: #FFFFFF" onmouseout="this.style.backgroundColor=&#39;#FFFFFF&#39;" onmouseover="this.style.backgroundColor=&#39;#EEEEEF&#39;"><a href="http://androideity.com/2011/08/05/patrones-de-diseno-en-android/"><img alt="Patrones de diseño en Android" src="./Manejando la rotación de pantalla en Android   Androideity_files/patronesdedisenio-150x150.png" width="150" height="150" style="padding: 0px; margin: 0px; border: 0pt none;"></a><a href="http://androideity.com/2011/08/05/patrones-de-diseno-en-android/" style="display: block; width: 150px; overflow: hidden;height: 75px; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: #86A3A4;text-decoration: none;"><span>Patrones de diseño en Android</span></a></li><li style="float: left; padding: 0; margin:0; padding: 5px; display: block; border-right: 1px solid #DDDDDD; background-color: #FFFFFF" onmouseout="this.style.backgroundColor=&#39;#FFFFFF&#39;" onmouseover="this.style.backgroundColor=&#39;#EEEEEF&#39;"><a href="http://androideity.com/2011/10/19/intents-en-android-implicitos/"><img alt="Intents en Android: Intents implícitos" src="./Manejando la rotación de pantalla en Android   Androideity_files/intentimplicitos-150x150.png" width="150" height="150" style="padding: 0px; margin: 0px; border: 0pt none;"></a><a href="http://androideity.com/2011/10/19/intents-en-android-implicitos/" style="display: block; width: 150px; overflow: hidden;height: 75px; font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: #86A3A4;text-decoration: none;"><span>Intents en Android: Intents implícitos</span></a></li></ul><div style="clear: both"></div><div class="clear"></div>
+
+	<div id="imagecomentario"></div>
+	<div class="title">
+		<h2>Comentarios de este artículo</h2>
+	</div>				
+			
+<div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Manejando la rotación de pantalla en Android   Androideity_files/saved_resource.html" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 5042px !important;"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/';
+    var disqus_identifier = '1462 http://androideity.com/?p=1462';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'androideity';
+    var disqus_title = "Manejando la rotación de pantalla en Android";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=1462';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/androideity.com\/2011\/10\/06\/manejando-la-rotacion-de-pantalla-en-android\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+
+				
+			<nav id="nav-below">
+				<div class="nav-previous"><a href="http://androideity.com/2011/10/05/corre-aplicaciones-android-en-tu-pc/" rel="prev">←  Post anterior</a></div>
+				<div class="nav-next"><a href="http://androideity.com/2011/10/06/yuzu-television-online-alternativa-de-netflix/" rel="next">Siguiente post →</a></div>
+			</nav><!-- end nav-below -->
+				
+	</div><!-- end content -->
+	
+
+<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-5" class="widget widget_text"><h3 class="widget-title">Suscríbete</h3>			<div class="textwidget"><p><a href="http://www.facebook.com/pages/Androideity/244676678877059" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-widget&#39;,&#39;http://www.facebook.com&#39;]);" class="facebook" target="_blank">Facebook</a><a href="http://twitter.com/#!/androideity" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-widget&#39;,&#39;http://twitter.com&#39;]);" class="twitter" target="_blank">Twitter</a><a href="http://feeds.feedburner.com/androideity" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-widget&#39;,&#39;http://feeds.feedburner.com&#39;]);" class="rss" target="_blank">RSS Feed</a></p>
+<p class="clears"></p></div>
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-12"><a href="http://androideity.com/category/analisis/" title="Artículos relacionados a dar el punto de vista del autor acerca de un tema relacionado con la plataforma">Análisis</a> (9)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://androideity.com/category/aplicaciones/" title="Análisis de aplicaciones android, lanzamientos, novedades">Aplicaciones</a> (66)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://androideity.com/category/disenio/" title="Tips y explicación acerca de la creración de interfaces de usuario en Android">Diseño</a> (32)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://androideity.com/category/equipos-android/" title="Novedades y lanzamientos de equipos (smartphones y tablets) Android">Equipos Android</a> (3)
+</li>
+	<li class="cat-item cat-item-36"><a href="http://androideity.com/category/eventos-2/" title="Eventos, conferencias, congresos y talleres relacionados con el aprendizaje de Android.">Eventos</a> (30)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://androideity.com/category/herramientas/" title="Utilidades y herramientas que nos faciliten el desarrollo en Android">Herramientas</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://androideity.com/category/programacion/" title="Desarrollo de componentes">Programación</a> (110)
+</li>
+	<li class="cat-item cat-item-29"><a href="http://androideity.com/category/tips/" title="Artículos cortos que describen algunos tips de desarrollo, configuración y best practices en android.">Tips</a> (5)
+</li>
+	<li class="cat-item cat-item-208"><a href="http://androideity.com/category/videojuegos/" title="Análisis de videojuegos disponibles para el sistema operativo Android, reviews, lanzamiento, análisis.">Videojuegos</a> (13)
+</li>
+		</ul>
+</aside><aside id="linkcat-2" class="widget widget_links"><h3 class="widget-title">Blogroll</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://androcode.es/" rel="co-worker" title="Androcode es programación, Androcode es tecnología, Androcode es información para desarrolladores de habla hispana. Desde Androcode pretendemos informaros de las novedades en herramientas y noticias que nos tocan de cerca, proporcionaros tutoriales más al" target="_blank" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-blogroll&#39;,&#39;http://androcode.es&#39;]);">AndroCode</a></li>
+<li><a href="http://www.androiduniverse.net/" rel="co-worker" title="Te informamos y recomendamos las mejores cosas para tu smartphone Android, igualmente ofreciéndote ayuda a lo que requieras." target="_blank" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-blogroll&#39;,&#39;http://www.androiduniverse.net&#39;]);">Android Universe</a></li>
+<li><a href="http://androjuegos.com/" rel="co-worker" title="Comunidad que ofrece una serie de reviews de  juegos que están programados para la plataforma Android, así como lanzamientos y noticias." target="_blank" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-blogroll&#39;,&#39;http://androjuegos.com&#39;]);">Androjuegos</a></li>
+<li><a href="http://androtalk.es/" rel="co-worker" target="_blank" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-blogroll&#39;,&#39;http://androtalk.es&#39;]);">AndroTalk</a></li>
+<li><a href="http://honeyapp.blogspot.com/" rel="co-worker" title="Programación Android en Castellano. Blog dedicado a Honeycomb, Android 3.0" target="_blank" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-blogroll&#39;,&#39;http://honeyapp.blogspot.com&#39;]);">HoneyApp</a></li>
+
+	</ul>
+</aside>
+<aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archivo</h3>		<ul>
+			<li><a href="http://androideity.com/2014/08/" title="August 2014">August 2014</a></li>
+	<li><a href="http://androideity.com/2014/04/" title="April 2014">April 2014</a></li>
+	<li><a href="http://androideity.com/2014/02/" title="February 2014">February 2014</a></li>
+	<li><a href="http://androideity.com/2013/12/" title="December 2013">December 2013</a></li>
+	<li><a href="http://androideity.com/2013/10/" title="October 2013">October 2013</a></li>
+	<li><a href="http://androideity.com/2013/05/" title="May 2013">May 2013</a></li>
+	<li><a href="http://androideity.com/2013/03/" title="March 2013">March 2013</a></li>
+	<li><a href="http://androideity.com/2013/02/" title="February 2013">February 2013</a></li>
+	<li><a href="http://androideity.com/2012/11/" title="November 2012">November 2012</a></li>
+	<li><a href="http://androideity.com/2012/10/" title="October 2012">October 2012</a></li>
+	<li><a href="http://androideity.com/2012/08/" title="August 2012">August 2012</a></li>
+	<li><a href="http://androideity.com/2012/07/" title="July 2012">July 2012</a></li>
+	<li><a href="http://androideity.com/2012/06/" title="June 2012">June 2012</a></li>
+	<li><a href="http://androideity.com/2012/05/" title="May 2012">May 2012</a></li>
+	<li><a href="http://androideity.com/2012/04/" title="April 2012">April 2012</a></li>
+	<li><a href="http://androideity.com/2012/03/" title="March 2012">March 2012</a></li>
+	<li><a href="http://androideity.com/2012/02/" title="February 2012">February 2012</a></li>
+	<li><a href="http://androideity.com/2012/01/" title="January 2012">January 2012</a></li>
+	<li><a href="http://androideity.com/2011/12/" title="December 2011">December 2011</a></li>
+	<li><a href="http://androideity.com/2011/11/" title="November 2011">November 2011</a></li>
+	<li><a href="http://androideity.com/2011/10/" title="October 2011">October 2011</a></li>
+	<li><a href="http://androideity.com/2011/09/" title="September 2011">September 2011</a></li>
+	<li><a href="http://androideity.com/2011/08/" title="August 2011">August 2011</a></li>
+	<li><a href="http://androideity.com/2011/07/" title="July 2011">July 2011</a></li>
+		</ul>
+</aside>		</div><!-- #secondary .widget-area -->
+</div><!-- end main -->
+
+		<div id="tertiary" class="widget-area" role="complementary">
+			<aside id="search-3" class="widget widget_search"><form role="search" method="get" class="searchform" action="http://androideity.com/">
+    <div><label class="screen-reader-text" for="s"></label>
+    <input type="text" class="search-input" value="" name="s" id="s">
+    <input type="submit" class="searchsubmit" value="Buscar">
+    </div>
+    </form></aside><aside id="text-7" class="widget widget_text"><h3 class="widget-title">GitHub</h3>			<div class="textwidget"><p><a href="https://github.com/Androideity" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-widget&#39;,&#39;http://github.com&#39;]);" target="_blank"><img src="./Manejando la rotación de pantalla en Android   Androideity_files/GitHub1.png"></a></p></div>
+		</aside>		<aside id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Últimos posts</h3>		<ul>
+				<li><a href="http://androideity.com/2014/08/27/pantalla-de-bloqueo-al-estilo-moto-x-con-dynamic-notifications/" title="Pantalla de Bloqueo al estilo Moto X con Dynamic Notifications">Pantalla de Bloqueo al estilo Moto X con Dynamic Notifications</a></li>
+				<li><a href="http://androideity.com/2014/08/25/los-mejores-filtros-vintage-con-lomo-camera/" title="LOS MEJORES FILTROS VINTAGE CON LOMO CAMERA">LOS MEJORES FILTROS VINTAGE CON LOMO CAMERA</a></li>
+				<li><a href="http://androideity.com/2014/08/20/hangout-android-l-y-material-design/" title="Hangout – Android L y Material Design">Hangout – Android L y Material Design</a></li>
+				<li><a href="http://androideity.com/2014/04/21/creacion-de-un-rest-api-con-google-appscript-y-uso-de-volley-framework-en-android-parte-2/" title="Creación de un Rest API con Google AppScript y uso de Volley Framework en Android – Parte 2">Creación de un Rest API con Google AppScript y uso de Volley Framework en Android – Parte 2</a></li>
+				<li><a href="http://androideity.com/2014/04/11/creacion-de-un-rest-api-con-google-appscript-y-uso-de-volley-framework-en-android-parte-1/" title="Creación de un Rest API con Google AppScript y uso de Volley Framework en Android – Parte 1">Creación de un Rest API con Google AppScript y uso de Volley Framework en Android – Parte 1</a></li>
+				</ul>
+		</aside><aside id="text-4" class="widget widget_text"><h3 class="widget-title">Autores</h3>			<div class="textwidget"><p><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es.html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 141px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(1).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 160px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(2).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 123px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-3" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(3).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 174px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-4" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(4).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 113px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-5" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(5).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 133px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-6" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(6).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 168px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-7" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(7).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 148px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-8" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(8).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 150px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-9" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(9).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 150px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p>
+
+<p><iframe id="twitter-widget-10" scrolling="no" frameborder="0" allowtransparency="true" src="./Manejando la rotación de pantalla en Android   Androideity_files/follow_button.df71e9fd75415d2cee8cfded99ebe79f.es(10).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 160px; height: 20px;"></iframe>
+<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widgets.js" type="text/javascript"></script></p></div>
+		</aside><aside id="text-6" class="widget widget_text">			<div class="textwidget"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Manejando la rotación de pantalla en Android   Androideity_files/DU1Ia251o0y.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Manejando la rotación de pantalla en Android   Androideity_files/DU1Ia251o0y(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/androideity" data-width="250" data-show-faces="true" data-border-color="4d4d4d" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;header=false&amp;href=http%3A%2F%2Fwww.facebook.com%2Fandroideity&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=250"><span style="vertical-align: bottom; width: 250px; height: 241px;"><iframe name="f25bc0c83" width="250px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./Manejando la rotación de pantalla en Android   Androideity_files/like_box.html" style="border: none; visibility: visible; width: 250px; height: 241px;" class=""></iframe></span></div></div>
+		</aside><aside id="twibadge" class="widget BHTwiBadge_showTwiBadge">			<!-- TwiBadge -->
+			<script src="./Manejando la rotación de pantalla en Android   Androideity_files/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: "profile",
+			  rpp: 30,
+			  interval: 6000,
+			  width: 250,
+			  height: 300,
+			  theme: {
+				shell: {
+				  background: "#4D4D4D",
+				  color: "#A4C639"
+				},
+				tweets: {
+				  background: "#ffffff",
+				  color: "#000000",
+				  links: "#86A3A4"
+				}
+			  },
+			  features: {
+				scrollbar: true,
+				loop: false,
+				live: false,
+				hashtags: true,
+				timestamp: true,
+				avatars: false,
+				behavior: "all"
+			  }
+			}).render().setUser("androideity").start();
+			</script>
+</aside>		</div><!-- end tertiary .widget-area -->
+</div><!-- end wrap -->
+
+	<footer id="colophon" class="clearfix">
+    	<p>Powered by <a href="http://twitter.com/condesa_sama" rel="generator">@condesa_sama</a><span class="sep"> | </span>Theme: Yoko by <a href="http://www.elmastudio.de/wordpress-themes/" rel="designer" target="_blank">Elmastudio</a></p>
+    	<p>Todo el contenido Bajo la <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/mx/" target="_blank">Licencia Atribución No comercial Compartir igual 2.5 México de Creative Commons</a></p>
+        <div id="licencia"></div>
+		
+		<a href="http://androideity.com/2011/10/06/manejando-la-rotacion-de-pantalla-en-android/#page" class="top">Ir hasta arriba</a>
+	</footer><!-- end colophon -->
+	
+</div><!-- end page -->
+<script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/smoothscroll.js"></script>
+<script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/jquery.form.js"></script>
+<script type="text/javascript" src="./Manejando la rotación de pantalla en Android   Androideity_files/scripts.js"></script>
+
+
+<iframe id="stSegmentFrame" name="stSegmentFrame" src="./Manejando la rotación de pantalla en Android   Androideity_files/getSegment.html" frameborder="0" scrolling="no" width="0px" height="0px" style="display:none;"></iframe><div id="stwrapper" class="stwrapper stwrapper4x" style="display: none;"><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="./Manejando la rotación de pantalla en Android   Androideity_files/index.82880ee810be51902bcdceb814213b8d.html"></iframe></div><div id="stOverlay" onclick="javascript:stWidget.closeWidget();"></div></body></html>
