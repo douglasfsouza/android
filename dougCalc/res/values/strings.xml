@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">dougCalc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Vai apertar outra coisa</string>
+    <string name="um">1</string>
+    <string name="dois">2</string>
+    <string name="tres">3</string>
+    <string name="quatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="sete">7</string>
+    <string name="oito">8</string>
+    <string name="nove">9</string>
+    <string name="zero">0</string>
+    <string name="mais">+</string>
+    <string name="menos">-</string>
+    <string name="vezes">x</string>
+    <string name="div">/</string>
+    <string name="BS">&lt;-</string>
+    <string name="Binario"> </string>
+    <string name="Igual">=</string>
+    <string name="c">c</string>
+    <string name="ponto">.</string>
+
+</resources>
