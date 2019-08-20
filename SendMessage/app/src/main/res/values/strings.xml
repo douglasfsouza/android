@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SendMessage</string>
+    <string name="ed_msg">Digite uma mensagem a ser enviada a outra tela</string>
+</resources>
