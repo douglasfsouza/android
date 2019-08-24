@@ -1,1 +1,2 @@
 one
+to commit without staging area
