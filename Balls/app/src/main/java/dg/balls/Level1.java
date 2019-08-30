@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -43,6 +44,12 @@ public class Level1 extends AppCompatActivity {
     long mlngMaxY;
     long mlngMaxX;
     long mlngStep;
+    int mintWidth;
+    int mintHeight;
+    int mintSpeed = 30;
+    int mintRows = 4;
+    int mintCols = 15;
+
     int tst = 0;
     String strLastMove;
 
@@ -57,8 +64,11 @@ public class Level1 extends AppCompatActivity {
         //imp.setX(10);
         View vLevel1 = findViewById(R.id.vwLevel1);
         //mlngMaxY =  vLevel1.getHeight();
-        mlngMaxY = 600;
-        mlngMaxX = 1500;
+
+
+
+
+        //mlngMaxX = vLevel1.getMeasuredWidth();
 
        // imp.setY(imp.getY() - imp.getY());
         //imp.setLeft(0);
@@ -69,12 +79,35 @@ public class Level1 extends AppCompatActivity {
         imSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(this,"Save",Toast.LENGTH_LONG).show();
-                Toast.makeText(this,"pass",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Save",Toast.LENGTH_LONG).show();
+              //  Toast.makeText( this,"Save",Toast.LENGTH_LONG).show();
+               // Toast.makeText(this,"pass",Toast.LENGTH_LONG).show();
             }
         });*/
 
         criarObjetos();
+
+        ViewTreeObserver vto = imp.getViewTreeObserver();
+        vto.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+                                     @Override
+                                     public boolean onPreDraw() {
+                                         imp.getViewTreeObserver().removeOnPreDrawListener(this);
+                                         mintWidth = imp.getWidth();
+                                         mintHeight= imp.getHeight();
+
+                                         return true;
+                                     }
+
+        });
+        /*if(mintHeight==0)
+            mintHeight = 131;
+
+        if (mintWidth==0)
+            mintWidth = 131;*/
+        //mintWidth = 131;
+        //mintHeight =131;//imp.getHeight();
+        //mlngMaxY = mintHeight * 4;
+        //mlngMaxX = mintWidth * 11;
 
 
         int nn=0;
@@ -105,10 +138,19 @@ public class Level1 extends AppCompatActivity {
 
         //imTex[0].setVisibility(View.INVISIBLE);
 
+//        Toast.makeText(this,String.valueOf(imp.getX()),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,String.valueOf(mintHeight),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,String.valueOf(imp.getWidth()),Toast.LENGTH_LONG).show();
+
         vLevel1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                mlngMaxY = mintHeight * mintRows;
+                mlngMaxX = mintWidth * mintCols;
+
+
                 if (event.getAction()==MotionEvent.ACTION_DOWN){
+                    //Toast.makeText(this,String.valueOf(mintHeight),Toast.LENGTH_LONG).show();
                     mstrDirection = "s";
                     if (event.getY() < imp.getY()
                             && event.getX() >= imp.getX()
@@ -140,34 +182,8 @@ public class Level1 extends AppCompatActivity {
                     if (mstrDirection != "s") {
                         mcdTimerMain.cancel();
                         mcdStep.cancel();
+                        enquadrar();
 
-                        while (Math.floorMod((int) imp.getY(), 150) != 0) {
-                            if (mstrDirection == "u") {
-                                imp.setY(imp.getY() - 15);
-                                if (imp.getY() < 0)
-                                    imp.setY(0);
-                            }
-
-                            if (mstrDirection == "d") {
-                                imp.setY(imp.getY() + 15);
-                                if (imp.getY() > mlngMaxY)
-                                    imp.setY(mlngMaxY);
-                            }
-                        }
-
-
-                        while (Math.floorMod((int) imp.getX(), 150) != 0) {
-                            if (mstrDirection == "r") {
-                                imp.setX(imp.getX() + 15);
-                                if (imp.getX() > mlngMaxX)
-                                    imp.setX(mlngMaxX);
-                            }
-                            if (mstrDirection == "l") {
-                                imp.setX(imp.getX() - 15);
-                                if (imp.getX() < 0)
-                                    imp.setX(0);
-                            }
-                        }
                         mlngStep = 20;
                     }
                 }
@@ -175,31 +191,69 @@ public class Level1 extends AppCompatActivity {
             }
         });
     }
+    private void enquadrar(){
+        if (mstrDirection == "r"){
+            int intGetx =(int) imp.getX();
+            for(int r = 1;r < mintCols + 1; r++){
+                if(intGetx < mintWidth * r ){
+                    imp.setX(mintWidth * r);
+                    break;
+                }
+            }
+        }
+        else if (mstrDirection == "l"){
+            int intGetx =(int) imp.getX();
+            for(int r = mintCols;r >0; r--){
+                if(intGetx > mintWidth * r ){
+                    imp.setX(mintWidth * r);
+                    break;
+                }
+            }
+        }
+        else if (mstrDirection == "d"){
+            int intGety =(int) imp.getY();
+            for(int r = 1;r < mintRows + 1; r++){
+                if(intGety < mintHeight * r ){
+                    imp.setY(mintHeight * r);
+                    break;
+                }
+            }
+        }
+        else if (mstrDirection == "u"){
+            int intGety =(int) imp.getY();
+            for(int r = mintRows;r >= 0; r--){
+                if(intGety > mintHeight * r ){
+                    imp.setY(mintHeight * r);
+                    break;
+                }
+            }
+        }
+    }
 
     private void moveMain(){
         mcdTimerMain = new CountDownTimer(10000,100) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (mstrDirection == "u"){
-                    mlngStep =1;
+                    mlngStep = 1;
                     subir();
                 }
                 if (mstrDirection == "d"){
-                    mlngStep =1;
+                    mlngStep = 1;
                     descer();
                 }
                 if (mstrDirection == "r"){
-                    mlngStep =1;
+                    mlngStep = 1;
                     direita();
 
                 }
                 if (mstrDirection == "l"){
-                    mlngStep =1;
+                    mlngStep = 1;
                     esquerda();
                 }
                 if(mstrDirection != "s") {
-                    HideNext();
-                    Cair();
+                    hideNext();
+                    cair();
                 }
 
 
@@ -211,19 +265,23 @@ public class Level1 extends AppCompatActivity {
         }.start();
     }
 
-    private void Cair(){
+    private void cair(){
         mcdFall = new CountDownTimer(10000,200) {
             @Override
             public void onTick(long millisUntilFinished) {
                 for(int i =0; i<89; i++){
-                    if (i==21){
-                        if (imTex[i].getY() <= mlngMaxY-15){
-                            if (imTex[i].getY() <= limiteCair(i)) {
-                                if (imTex[i + 15].getVisibility() == View.INVISIBLE) {
-                                    imTex[i].setY(imTex[i].getY() + 15);
+                    if (i==21){//first ball
+                        if (imTex[i].getY() < mlngMaxY){
+                            if (imTex[i].getY() < limiteCair(i)) {
+                                if (imTex[i + mintCols].getVisibility() == View.INVISIBLE) {
+                                    imTex[i].setY(imTex[i].getY() + mintSpeed);
                                 }
-                            }
+                            }else
+                                if (limiteCair(i) != 0)
+                                    imTex[i].setY(limiteCair(i));
                         }
+                        else
+                            imTex[i].setY((float)mlngMaxY);
                     }
                 }
             }
@@ -234,8 +292,6 @@ public class Level1 extends AppCompatActivity {
             }
         }.start();
     }
-
-
 
     private void subir(){
        mcdStep = new CountDownTimer(1000,200) {
@@ -246,10 +302,12 @@ public class Level1 extends AppCompatActivity {
                         mlngStep = 11;
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="u") {
-                            imp.setY(imp.getY() - 15);
+                            imp.setY(imp.getY() - mintSpeed);
                         }
                     }
                 }
+                else
+                    imp.setY(0);
             }
 
             @Override
@@ -263,19 +321,19 @@ public class Level1 extends AppCompatActivity {
             String stra = "(" + String.valueOf(imTex[0].getX()) + ")" + "(" + String.valueOf(imTex[1].getX()) + ")"  + "(" + String.valueOf(imTex[2].getX()) + ")";
             stra = String.valueOf(  Math.floorMod(300,150));
             stra = String.valueOf(imp.getY());
-           // Toast.makeText(this,stra,Toast.LENGTH_LONG).show();
+            //String strMaxx = String.valueOf(vLevel1.getMeasuredWidth());
+            //Toast.makeText(this,strMaxx,Toast.LENGTH_LONG).show();
 
-        if(   imp.getX()>= imTex[84].getX()
-           && imp.getX() < imTex[85].getX()
-           && imp.getY()>= imTex[84].getY()-150 ){
+        if(   imp.getX() == imTex[84].getX()
+           && imp.getY() >= imTex[84].getY() - mintHeight ){
             stra = "Open";
             Abrir();
             //Toast.makeText(this,stra,Toast.LENGTH_LONG).show();
+            //Toast.makeText(this,String.valueOf(mintHeight),Toast.LENGTH_LONG).show();
 
         }
-        else if(imp.getX()>= imTex[85].getX() && imp.getY()>=imTex[85].getY()-150 ){
-            stra = "Save";
-            //Toast.makeText(this,stra,Toast.LENGTH_LONG).show();
+        else if(imp.getX() == imTex[85].getX()
+             && imp.getY()>=imTex[85].getY()-mintHeight ){
             Salvar();
 
         }
@@ -289,10 +347,12 @@ public class Level1 extends AppCompatActivity {
                             mlngStep = 11;
                         if (mlngStep++ <= 10) {
                             if (mstrDirection == "d") {
-                                imp.setY(imp.getY() + 15);
+                                imp.setY(imp.getY() + mintSpeed);
                             }
                         }
                     }
+                    else
+                        imp.setY(mlngMaxY);
                 }
 
                 @Override
@@ -302,20 +362,24 @@ public class Level1 extends AppCompatActivity {
             }.start();
         }
     }
-    private void direita(){
 
+    private void direita(){
         mcdStep = new CountDownTimer(1000,200) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (imp.getX() < mlngMaxX) {
+                   // imp.setX(imp.getX() + mintWidth);
+
                     if (mlngStep>11)
-                        mlngStep = 11;
+                        mlngStep =11;
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="r") {
-                            imp.setX(imp.getX() + 15);
+                            imp.setX(imp.getX() + mintSpeed);
                         }
                     }
                 }
+                else
+                    imp.setX(mlngMaxX);
             }
 
             @Override
@@ -324,6 +388,7 @@ public class Level1 extends AppCompatActivity {
             }
         }.start();
     }
+
     private void esquerda(){
         mcdStep = new CountDownTimer(1000,200) {
             @Override
@@ -333,10 +398,12 @@ public class Level1 extends AppCompatActivity {
                         mlngStep = 11;
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="l") {
-                            imp.setX(imp.getX() - 15);
+                            imp.setX(imp.getX() - mintSpeed);
                         }
                     }
                 }
+                else
+                    imp.setX(0);
             }
 
             @Override
@@ -346,7 +413,7 @@ public class Level1 extends AppCompatActivity {
         }.start();
     }
 
-    private void HideNext(){
+    private void hideNext(){
         for(int i =0;i<90;i++){
             if (mstrDirection == "r" ){
                 if(imTex[i].getY() == imp.getY()){
@@ -369,7 +436,7 @@ public class Level1 extends AppCompatActivity {
                 }
             }
             else if (mstrDirection == "u"){
-                if(imTex[i].getX() == imp.getX()){
+                if(imTex[i].getX() >= imp.getX()-2 && imTex[i].getX()<= imp.getX()+2){
                     if(imTex[i].getY()<imp.getY() && imTex[i].getY()>= imp.getY()-imp.getHeight()){
                         if(i!=21) {
                             imTex[i].setVisibility(View.INVISIBLE);
@@ -384,7 +451,10 @@ public class Level1 extends AppCompatActivity {
                             if(i!=21) {
                                 imTex[i].setVisibility(View.INVISIBLE);
                             }
-                            //Toast.makeText(this,String.valueOf(mlngMaxY * 5),Toast.LENGTH_LONG).show();
+                            //Mensagens
+                            //Toast.makeText(this,String.valueOf(  mlngMaxY * 5),Toast.LENGTH_LONG).show();
+                            Toast.makeText(this,"wid:" + String.valueOf( imp.getY()),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(this,"hei:" + String.valueOf(mintHeight),Toast.LENGTH_LONG).show();
                         }
                     }
                 }
@@ -393,26 +463,35 @@ public class Level1 extends AppCompatActivity {
     }
 
     private long limiteCair(int i){
-        int intRet =0;
+
+        long lngRet = 0;
+
         if (imp.getX() >= imTex[i].getX() && imp.getX()<= imTex[i].getX()+ imTex[i].getWidth()
-                                          && imp.getY() >= imTex[i].getY() - 15
-                                          && imp.getY() <= imTex[i].getY() * 2)
-            intRet = 0;
+                                          && imp.getY() >= imTex[i].getY() - mintHeight
+                                          && imp.getY() <= imTex[i].getY() + mintHeight)
+            lngRet = 0;
+
         else {
-            if (imTex[i + 15].getVisibility() == View.INVISIBLE) {
-                intRet = 300 - 15;
-                if (imTex[i + 30].getVisibility() == View.INVISIBLE) {
-                    intRet = 450 - 15;
-                    if (imTex[i + 45].getVisibility() == View.INVISIBLE) {
-                        intRet = 600 - 15;
-                        if (imTex[i + 60].getVisibility() == View.INVISIBLE) {
-                            intRet = 750 - 15;
+            if (imTex[i + mintCols].getVisibility() == View.INVISIBLE) {
+                //lngRet = mintHeight * 2;
+                lngRet =(long) imTex[i + mintCols].getY();
+
+                if (imTex[i + mintCols * 2].getVisibility() == View.INVISIBLE) {
+                    //lngRet = mintHeight * 3;
+                    lngRet =(long) imTex[i + mintCols * 2].getY();
+                    if (imTex[i + mintCols * 3].getVisibility() == View.INVISIBLE) {
+                        //lngRet = (long) imTex[i].getY() + mintHeight * 2;
+                        //lngRet = mintHeight * 4;
+                        lngRet =(long) imTex[i + mintCols * 3].getY();
+                        if (imTex[i + mintCols * 4].getVisibility() == View.INVISIBLE) {
+                            //lngRet =  mintHeight * 5;
+                            lngRet =(long) imTex[i + mintCols * 4].getY();
                         }
                     }
                 }
             }
         }
-        return intRet;
+        return lngRet;
     }
 
     private void criarObjetos(){
