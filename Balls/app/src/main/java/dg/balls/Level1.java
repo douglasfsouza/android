@@ -39,7 +39,6 @@ public class Level1 extends AppCompatActivity {
     CountDownTimer mcdTimerMain;
     CountDownTimer mcdStep;
     CountDownTimer mcdFall;
-    CountDownTimer mcdHide;
     View vLevel1;
     String mstrDirection;
     long mlngMaxY;
@@ -50,7 +49,6 @@ public class Level1 extends AppCompatActivity {
     int mintSpeed = 30;
     int mintRows = 4;
     int mintCols = 15;
-    int mintMinX = 999;
 
     int tst = 0;
     String strLastMove;
@@ -199,7 +197,6 @@ public class Level1 extends AppCompatActivity {
             for(int r = 1;r < mintCols + 1; r++){
                 if(intGetx < mintWidth * r ){
                     imp.setX(mintWidth * r);
-                    hideNext();
                     break;
                 }
             }
@@ -209,7 +206,6 @@ public class Level1 extends AppCompatActivity {
             for(int r = mintCols;r >0; r--){
                 if(intGetx > mintWidth * r ){
                     imp.setX(mintWidth * r);
-                    hideNext();
                     break;
                 }
             }
@@ -219,7 +215,6 @@ public class Level1 extends AppCompatActivity {
             for(int r = 1;r < mintRows + 1; r++){
                 if(intGety < mintHeight * r ){
                     imp.setY(mintHeight * r);
-                    hideNext();
                     break;
                 }
             }
@@ -229,7 +224,6 @@ public class Level1 extends AppCompatActivity {
             for(int r = mintRows;r >= 0; r--){
                 if(intGety > mintHeight * r ){
                     imp.setY(mintHeight * r);
-                    hideNext();
                     break;
                 }
             }
@@ -237,7 +231,7 @@ public class Level1 extends AppCompatActivity {
     }
 
     private void moveMain(){
-        mcdTimerMain = new CountDownTimer(10000,20) {
+        mcdTimerMain = new CountDownTimer(10000,100) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (mstrDirection == "u"){
@@ -258,7 +252,7 @@ public class Level1 extends AppCompatActivity {
                     esquerda();
                 }
                 if(mstrDirection != "s") {
-                    //hideNext();
+                    hideNext();
                     cair();
                 }
 
@@ -309,7 +303,6 @@ public class Level1 extends AppCompatActivity {
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="u") {
                             imp.setY(imp.getY() - mintSpeed);
-                            hideNext();
                         }
                     }
                 }
@@ -355,7 +348,6 @@ public class Level1 extends AppCompatActivity {
                         if (mlngStep++ <= 10) {
                             if (mstrDirection == "d") {
                                 imp.setY(imp.getY() + mintSpeed);
-                                hideNext();
                             }
                         }
                     }
@@ -382,16 +374,12 @@ public class Level1 extends AppCompatActivity {
                         mlngStep =11;
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="r") {
-
                             imp.setX(imp.getX() + mintSpeed);
-                            hideNext();
                         }
                     }
                 }
-                else{
+                else
                     imp.setX(mlngMaxX);
-                };
-
             }
 
             @Override
@@ -405,20 +393,17 @@ public class Level1 extends AppCompatActivity {
         mcdStep = new CountDownTimer(1000,200) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if (imp.getX() > mintMinX) {
+                if (imp.getX() > 0) {
                     if (mlngStep>11)
                         mlngStep = 11;
                     if (mlngStep++ <= 10) {
                         if (mstrDirection=="l") {
-
                             imp.setX(imp.getX() - mintSpeed);
-                            hideNext();
                         }
                     }
                 }
-                else{
-                    imp.setX(mintMinX);
-                }
+                else
+                    imp.setX(0);
             }
 
             @Override
@@ -428,12 +413,11 @@ public class Level1 extends AppCompatActivity {
         }.start();
     }
 
-
     private void hideNext(){
         for(int i =0;i<90;i++){
             if (mstrDirection == "r" ){
                 if(imTex[i].getY() == imp.getY()){
-                    if(imp.getX()>=imTex[i].getX() && imp.getX()<=imTex[i].getX()+ mintWidth){
+                    if(imTex[i].getX()>imp.getX() && imTex[i].getX()<= imp.getX()+imp.getWidth()){
                         if(imTex[i].getX()<=(float)mlngMaxX ) {
                             if (i!=21) {
                                 imTex[i].setVisibility(View.INVISIBLE);
@@ -444,8 +428,7 @@ public class Level1 extends AppCompatActivity {
             }
             else if(mstrDirection =="l"){
                 if(imTex[i].getY() == imp.getY()){
-                    //if(imTex[i].getX()<=imp.getX() && imTex[i].getX()>= imp.getX()-imp.getWidth()){
-                    if(imp.getX() >= imTex[i].getX()-mintWidth && imp.getX() <= imTex[i].getX() ){
+                    if(imTex[i].getX()<imp.getX() && imTex[i].getX()>= imp.getX()-imp.getWidth()){
                         if(i!=21) {
                             imTex[i].setVisibility(View.INVISIBLE);
                         }
@@ -454,7 +437,7 @@ public class Level1 extends AppCompatActivity {
             }
             else if (mstrDirection == "u"){
                 if(imTex[i].getX() >= imp.getX()-2 && imTex[i].getX()<= imp.getX()+2){
-                     if(imp.getY() >= imTex[i].getY() - mintHeight && imp.getY() <= imTex[i].getY() ) {
+                    if(imTex[i].getY()<imp.getY() && imTex[i].getY()>= imp.getY()-imp.getHeight()){
                         if(i!=21) {
                             imTex[i].setVisibility(View.INVISIBLE);
                         }
@@ -463,7 +446,7 @@ public class Level1 extends AppCompatActivity {
             }
             else if(mstrDirection=="d"){
                 if(imTex[i].getX() == imp.getX()){
-                    if (imp.getY() >= imTex[i].getY() && imp.getY() <= imTex[i].getY() + mintHeight){
+                    if(imTex[i].getY()>imp.getY() && imTex[i].getY()<= imp.getY()+imp.getHeight()){
                         if(imTex[i].getY() <= mlngMaxY) {
                             if(i!=21) {
                                 imTex[i].setVisibility(View.INVISIBLE);
@@ -613,10 +596,10 @@ public class Level1 extends AppCompatActivity {
         imTex[88] = findViewById(R.id.imTex89);
         imTex[89] = findViewById(R.id.imTex90);
 
-       for(int i = 1;i<89;i++){
-            if (imTex[i].getX()< mintMinX)
-                mintMinX =(int) imTex[i].getX();
-        }
+  //      for(int i = 1;i<85;i++){
+  //          intId--;
+  //          imTex[i] = findViewById(intId);
+  //      }
     }
     private void Salvar() {
         FileOutputStream fos;
