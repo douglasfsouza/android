@@ -3,12 +3,9 @@ package com.example.dgTimer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button objBtnWrite = findViewById(R.id.btnWrite);
         objBtnWrite.setOnClickListener( new View.OnClickListener( ) {
             @Override
@@ -66,19 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 stopTimer();
             }
         });
-        ImageView im = findViewById(R.id.im);
-
-        //im.setOnCapturedPointerListener(new View.on);
-        im.setOnClickListener(new View.OnClickListener() {
-                                  @Override
-                                  public void onClick(View v) {
-                                      EditText ed = findViewById(R.id.edWrite);
-                                      ed.setText("im Escreveu aqui:" + v.getPivotX());
-
-                                  }
-                              }
-
-        );
     }
     public void startTimer(){
         objTimer = new CountDownTimer(5000,1) {
@@ -125,20 +108,4 @@ public class MainActivity extends AppCompatActivity {
         blnRunning=false;
         objTimer.cancel();
     }
-    /*public boolean onTouch(View v, MotionEvent ev ){
-        int x = (int) ev.getX();
-        int y = (int) ev.getY();
-        switch (ev.getAction())
-        {
-            case MotionEvent.ACTION_DOWN            :
-                EditText ed = findViewById(R.id.edWrite);
-                ed.setText("touch down");
-                case MotionEvent.ACTION_MOVE            :
-                    case MotionEvent.ACTION_UP:}
-                    return false;
-    }*/
-
-
-
-
 }

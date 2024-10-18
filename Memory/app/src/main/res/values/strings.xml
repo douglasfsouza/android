@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Memory</string>
+    <string name="action_settings">Settings</string>
+    <string name="imagem">Image to be click</string>
+    <string name="mix">Mix</string>
+
+    <string name="title_activity_free">ActivityFree</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

@@ -1,0 +1,35 @@
+MainActivity
+  Botoes para escolher niveis ou temas
+
+Activity 1
+  8 imageviews
+ Processo:
+  Ao carregar a intent
+    carregar 4 pares de imagens de drawable
+      associar um nro a cada par
+        1-flor
+        2-toystory
+        3-nemo
+        4-spider
+    calcular  4 nros aleatorios
+    se aleatorio 1 = 1 entao img1 = flor
+    se aleatorio 2 = 2 entao img2 = toystory
+    se aleatorio 3 = 3 entao img3 = nemo
+    se aleatorio 4 = 4 entao img4 = spider
+    calcular mais 4 nros aleatorios
+    se aleatorio 5 = 1 entao img5 = flor
+    se aleatorio 6 = 2 entao img6 = toystory
+    se aleatorio 7 = 3 entao img7 = nemo
+    se aleatorio 8 = 4 entao img8 = spider
+    img1_click
+     se mstrClicou = flor e img1 = flor
+        ou mstrClicou = toystory e img1 = toystory
+        ou ..
+          img1.setVisibility(false)
+          mobjClicou.setVisibility(false)
+     mobjClicou = img1  
+     mstrClicou = mstrImg1 
+   
+ 
+ 
+   

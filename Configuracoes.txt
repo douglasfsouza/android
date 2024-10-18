@@ -1,0 +1,58 @@
+******************************
+*Depurar direto pelo celular:*
+******************************
+  No celular:
+  1 - habilitar o modo desenvolvedor no celular
+  2 - habilitar a depuracao usb no celular
+  3 - conectar o cabo usb no pc
+  
+  No Visual Studio installer:
+  1 - Modificar
+  2 - Aba Componentes individuais
+       SDKs, bibliotecas e estruturas
+	      Conectividade do dispositivo USB
+		 
+  No Visual Studio:
+     1 - Ferramentas
+	       Android
+		       Gerenciador de SDKs Android
+			        Aba Ferramentas
+					    Android SDK Platform tools -> o mais atual
+						Android Emulator
+						Extras
+						   Google USB Driver
+			
+			
+	2 - Ferramentas
+	       Android
+                Reiniciar o servidor Adb
+	3 - Reinicie o Visual studio
+	4 - Seta para baixo para escolher a opção:
+       	Dispositivos Locais do Android
+	
+*********************************
+Configurar para depurar por Wifi*
+*********************************
+No celular:
+  1 - habilitar o modo desenvolvedor no celular
+  2 - habilitar a depuracao usb no celular
+  3 - habilitar a depuracao por wifi
+  4 - conectar o cabo usb no pc
+  5 - conectar o cel na mesma wifi do pc
+  6 - Verifique e anote o ip do celular
+No Visual Studio:
+ 1 - Ferramentas
+	       Android
+		       Prompt de comando do Adb
+			      Executar
+				     adb tcpip 5555
+ 2 - Desconectar o cabo usb
+ 3 - conectar:
+       adb connect 192.168.15.145:5555
+ 4 - para voltar para usb:
+       adb usb
+ 5 - para ver os dispositivos conectados:
+       adb devices
+ 
+
+	
